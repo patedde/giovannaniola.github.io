@@ -4,9 +4,9 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://niolaterapia.com',
+  site: 'https://terapianiola.com',
+  // Remove base entirely for custom domain
   output: 'static',
-  vite: {
-    plugins: [tailwindcss()]
-  }
+  adapter: staticAdapter(),
+  integrations: [tailwind()],
 });
