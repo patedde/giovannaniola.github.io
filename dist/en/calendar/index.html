@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="en" class="bg-white text-slate-900"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Calendar - Book a session</title><meta name="description" content="Book an appointment for a psychotherapy session"><meta property="og:title" content="Calendar - Book a session"><meta property="og:description" content="Book an appointment for a psychotherapy session"><meta property="og:image" content="/images/placeholder-hero.jpg"><link rel="icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/niolaterapia.com/_astro/about.CRrrNeXF.css"></head> <body class="min-h-screen flex flex-col font-sans"> <!-- Skip to main content for accessibility --> <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-emerald-600 text-white px-4 py-2 rounded"> Skip to content </a> <header class="border-b"> <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between"> <a href="/en/" class="font-serif text-xl hover:text-emerald-600 transition-colors">
+Giovanna Niola
+</a> <!-- Desktop Navigation --> <nav class="hidden md:flex items-center gap-6"> <a class="hover:underline hover:text-emerald-600 transition-colors" href="/en/about"> About </a> <a class="hover:underline hover:text-emerald-600 transition-colors" href="/en/cbt"> What&#39;s CBT </a> <a class="hover:underline hover:text-emerald-600 transition-colors" href="/en/calendar"> Calendar </a> <a class="hover:underline hover:text-emerald-600 transition-colors" href="/en/faq">
+FAQ
+</a> <a class="hover:underline hover:text-emerald-600 transition-colors" href="/en/privacy"> Privacy </a> <a href="/it/niolaterapia.com/en/calendar/" class="px-3 py-1 border rounded text-sm hover:bg-slate-100 transition-colors" hreflang="it" aria-label="Switch to Italiano"> Italiano </a> </nav> <!-- Mobile Menu Button --> <button id="mobile-menu-button" class="md:hidden p-2 hover:bg-slate-100 rounded" aria-label="Menu" aria-expanded="false"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> <!-- Mobile Navigation --> <nav id="mobile-menu" class="hidden md:hidden border-t"> <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col gap-4"> <a class="hover:text-emerald-600 transition-colors" href="/en/about"> About </a> <a class="hover:text-emerald-600 transition-colors" href="/en/cbt"> What&#39;s CBT </a> <a class="hover:text-emerald-600 transition-colors" href="/en/calendar"> Calendar </a> <a class="hover:text-emerald-600 transition-colors" href="/en/faq">
+FAQ
+</a> <a class="hover:text-emerald-600 transition-colors" href="/en/privacy"> Privacy </a> <a href="/it/niolaterapia.com/en/calendar/" class="px-3 py-1 border rounded text-sm hover:bg-slate-100 transition-colors" hreflang="it" aria-label="Switch to Italiano"> Italiano </a> </div> </nav> </header> <main id="main-content" class="flex-1">    <section class="max-w-5xl mx-auto px-4 py-12"> <img src="/images/placeholder-calendar.jpg" alt="Appointment calendar" class="rounded-2xl w-full h-56 object-cover mb-8" loading="lazy" width="1000" height="300"> <div class="mb-8 space-y-4"> <h1 class="font-serif text-3xl md:text-4xl">Book a session</h1> <p class="text-lg text-slate-700 leading-relaxed">
+Book an appointment (50 minutes). Availability syncs automatically with my Google Calendar.
+</p> <p class="text-slate-700 leading-relaxed">
+I offer both <strong>online</strong> sessions (via video call) and <strong>in-person</strong> sessions at my practice. 
+        Select your preferred option during booking.
+</p> <p class="text-sm text-slate-600">
+If you need to modify or cancel an appointment, you can do so directly from the confirmation link 
+        you'll receive via email, or contact me at <a href="mailto:giovannaniola@gmail.com" class="underline">giovannaniola@gmail.com</a>.
+</p> </div> <div data-requires-calendly-consent class="max-w-3xl mx-auto px-4"> <div id="calendly-container" class="min-h-[700px] border rounded bg-slate-50 flex items-center justify-center"> <p class="text-slate-600 text-center px-4"> Accept cookies to load the booking calendar. </p> </div> <noscript> <p class="mt-4 text-center">To book without JavaScript, open <a class="underline text-emerald-600" href="https://calendly.com/YOUR_USERNAME/50min" target="_blank" rel="noopener noreferrer">Calendly</a>.</p> </noscript> </div> <script>(function(){const url = "https://calendly.com/YOUR_USERNAME/50min";
+
+  function loadCalendly() {
+    if (document.getElementById('calendly-script')) return;
+    
+    const container = document.getElementById('calendly-container');
+    if (container) {
+      container.innerHTML = ''; // Clear placeholder message
+    }
+    
+    const s = document.createElement('script');
+    s.id = 'calendly-script';
+    s.src = 'https://assets.calendly.com/assets/external/widget.js';
+    s.onload = () => {
+      if (window.Calendly && container) {
+        window.Calendly.initInlineWidget({
+          url: url,
+          parentElement: container,
+          prefill: {},
+          utm: {}
+        });
+      }
+    };
+    s.onerror = () => {
+      if (container) {
+        container.innerHTML = '<p class="text-red-600 text-center">Failed to load calendar. Please try again later.</p>';
+      }
+    };
+    document.body.appendChild(s);
+  }
+  
+  document.addEventListener('calendly-consented', loadCalendly);
+  
+  // Auto-load if user has already consented in a previous visit
+  if (localStorage.getItem('calendly-consent') === 'granted') {
+    loadCalendly();
+  }
+})();</script> <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css"> </section>  </main> <footer class="border-t bg-slate-50"> <div class="max-w-5xl mx-auto px-4 py-8 text-sm"> <p><strong>Giovanna Niola</strong> - Psicoterapeuta cognitivo-comportamentale • Iscrizione: 1/SPS, Albo degli Psicologi Sardegna</p> <p class="mt-1">Email: <a href="mailto:giovannaniola@gmail.com" class="underline hover:text-emerald-600">giovannaniola@gmail.com</a></p> <p class="mt-2 text-slate-600">© 2025 Giovanna Niola</p> </div> </footer> <script>
+      // Mobile menu toggle
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', () => {
+          const isHidden = mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          menuButton.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+        });
+      }
+    </script> <script type="module" src="/src/components/ConsentBanner.ts"></script> </body> </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en" class="bg-white text-slate-900"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>About - Giovanna Niola</title><meta name="description" content="Information about my background and therapeutic approach"><meta property="og:title" content="About - Giovanna Niola"><meta property="og:description" content="Information about my background and therapeutic approach"><meta property="og:image" content="/images/placeholder-hero.jpg"><link rel="icon" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/niolaterapia.com/_astro/about.CRrrNeXF.css"></head> <body class="min-h-screen flex flex-col font-sans"> <!-- Skip to main content for accessibility --> <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-emerald-600 text-white px-4 py-2 rounded"> Skip to content </a> <header class="border-b"> <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between"> <a href="/en/" class="font-serif text-xl hover:text-emerald-600 transition-colors">
+Giovanna Niola
+</a> <!-- Desktop Navigation --> <nav class="hidden md:flex items-center gap-6"> <a class="hover:underline hover:text-emerald-600 transition-colors" href="/en/about"> About </a> <a class="hover:underline hover:text-emerald-600 transition-colors" href="/en/cbt"> What&#39;s CBT </a> <a class="hover:underline hover:text-emerald-600 transition-colors" href="/en/calendar"> Calendar </a> <a class="hover:underline hover:text-emerald-600 transition-colors" href="/en/faq">
+FAQ
+</a> <a class="hover:underline hover:text-emerald-600 transition-colors" href="/en/privacy"> Privacy </a> <a href="/it/niolaterapia.com/en/about/" class="px-3 py-1 border rounded text-sm hover:bg-slate-100 transition-colors" hreflang="it" aria-label="Switch to Italiano"> Italiano </a> </nav> <!-- Mobile Menu Button --> <button id="mobile-menu-button" class="md:hidden p-2 hover:bg-slate-100 rounded" aria-label="Menu" aria-expanded="false"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> <!-- Mobile Navigation --> <nav id="mobile-menu" class="hidden md:hidden border-t"> <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col gap-4"> <a class="hover:text-emerald-600 transition-colors" href="/en/about"> About </a> <a class="hover:text-emerald-600 transition-colors" href="/en/cbt"> What&#39;s CBT </a> <a class="hover:text-emerald-600 transition-colors" href="/en/calendar"> Calendar </a> <a class="hover:text-emerald-600 transition-colors" href="/en/faq">
+FAQ
+</a> <a class="hover:text-emerald-600 transition-colors" href="/en/privacy"> Privacy </a> <a href="/it/niolaterapia.com/en/about/" class="px-3 py-1 border rounded text-sm hover:bg-slate-100 transition-colors" hreflang="it" aria-label="Switch to Italiano"> Italiano </a> </div> </nav> </header> <main id="main-content" class="flex-1">    <article class="max-w-4xl mx-auto px-4 py-12"> <img src="/images/placeholder-about.jpg" alt="Giovanna Niola" class="rounded-2xl w-full h-64 object-cover mb-12" loading="lazy" width="800" height="400"> <section class="mb-12"> <h1 class="font-serif text-3xl md:text-4xl mb-6">About me</h1> <div class="prose prose-lg max-w-none"> <p class="text-slate-700 leading-relaxed">
+My name is Giovanna Niola and I'm a cognitive-behavioural therapist registered with the Sardinia Psychologists' Board (1/SPS).
+</p> <p class="text-slate-700 leading-relaxed mt-4">
+[Placeholder: Insert here your professional biography, the path that led you to become a psychotherapist, 
+          your motivations and your work philosophy.]
+</p> </div> </section> <section class="mb-12"> <h2 class="font-serif text-2xl md:text-3xl mb-6">My approach</h2> <div class="prose prose-lg max-w-none"> <p class="text-slate-700 leading-relaxed">
+I use CBT methods to set clear, measurable goals. The work is collaborative and practical, 
+          with exercises between sessions.
+</p> <p class="text-slate-700 leading-relaxed mt-4">
+[Placeholder: Describe your working method, how you structure sessions, which techniques you use most, 
+          and how you help your patients achieve their goals.]
+</p> </div> </section> <section> <h2 class="font-serif text-2xl md:text-3xl mb-6">My training</h2> <div class="prose prose-lg max-w-none"> <p class="text-slate-700 leading-relaxed">
+[Placeholder: List your academic training, specializations, relevant continuing education courses, 
+          supervisions, and any other professional credentials you consider important to share.]
+</p> </div> </section> </article>  </main> <footer class="border-t bg-slate-50"> <div class="max-w-5xl mx-auto px-4 py-8 text-sm"> <p><strong>Giovanna Niola</strong> - Psicoterapeuta cognitivo-comportamentale • Iscrizione: 1/SPS, Albo degli Psicologi Sardegna</p> <p class="mt-1">Email: <a href="mailto:giovannaniola@gmail.com" class="underline hover:text-emerald-600">giovannaniola@gmail.com</a></p> <p class="mt-2 text-slate-600">© 2025 Giovanna Niola</p> </div> </footer> <script>
+      // Mobile menu toggle
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', () => {
+          const isHidden = mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          menuButton.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+        });
+      }
+    </script> <script type="module" src="/src/components/ConsentBanner.ts"></script> </body> </html>
