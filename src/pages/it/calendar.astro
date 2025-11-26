@@ -11,12 +11,12 @@ const calendlyUrl = 'https://calendly.com/YOUR_USERNAME/50min';
 <BaseLayout lang={lang} title="Calendario - Prenota una seduta" description="Prenota un appuntamento per una seduta di psicoterapia">
   <Fragment slot="langswitch"><LanguageSwitch lang={lang} /></Fragment>
   <Fragment slot="langswitch-mobile"><LanguageSwitch lang={lang} /></Fragment>
-  
+   
   <section class="max-w-5xl mx-auto px-4 py-12">
     <img 
       src="/images/calendar.jpg" 
       alt="Calendario appuntamenti" 
-      class="rounded-2xl w-full h-56 object-cover mb-8" 
+      class="rounded-2xl w-full h-auto mb-8 shadow-sm" 
       loading="lazy"
       width="1000"
       height="300"
@@ -24,17 +24,19 @@ const calendlyUrl = 'https://calendly.com/YOUR_USERNAME/50min';
     
     <div class="mb-8 space-y-4">
       <h1 class="font-serif text-3xl md:text-4xl">Prenota una seduta</h1>
-      <p class="text-lg text-slate-700 leading-relaxed">
-        Prenota un appuntamento (50 minuti). Le disponibilità si sincronizzano automaticamente con il mio calendario Google.
-      </p>
-      <p class="text-slate-700 leading-relaxed">
-        Offro sedute sia <strong>online</strong> (via videochiamata) che <strong>in presenza</strong> nel mio studio. 
-        Seleziona l'opzione che preferisci durante la prenotazione.
-      </p>
-      <p class="text-sm text-slate-600">
-        Se hai bisogno di modificare o cancellare un appuntamento, puoi farlo direttamente dal link di conferma 
-        che riceverai via email, oppure contattami a <a href="mailto:giovannaniola@gmail.com" class="underline">giovannaniola@gmail.com</a>.
-      </p>
+      <div class="prose prose-lg max-w-none text-slate-700 leading-relaxed">
+        <p>
+          Prenota un appuntamento (50 minuti). Le disponibilità si sincronizzano automaticamente con il mio calendario Google.
+        </p>
+        <p>
+          Offro sedute sia <strong>online</strong> (via videochiamata) che <strong>in presenza</strong> nel mio studio. 
+          Seleziona l'opzione che preferisci durante la prenotazione.
+        </p>
+        <p class="text-sm text-slate-600 bg-slate-50 p-4 rounded-lg border border-slate-200">
+          <strong>Nota:</strong> Se hai bisogno di modificare o cancellare un appuntamento, puoi farlo direttamente dal link di conferma 
+          che riceverai via email, oppure contattami a <a href="mailto:giovannaniola@gmail.com" class="underline text-slate-800 hover:text-slate-600">giovannaniola@gmail.com</a>.
+        </p>
+      </div>
     </div>
 
     <CalendlyEmbed lang={lang} url={calendlyUrl} />
