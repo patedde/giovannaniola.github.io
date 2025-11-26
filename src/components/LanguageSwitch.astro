@@ -1,0 +1,16 @@
+---
+const { lang = 'it' } = Astro.props;
+const target = lang === 'it' ? 'en' : 'it';
+const path = Astro.url.pathname.replace(/^\/(it|en)/, '');
+const href = `/${target}${path === '' ? '/' : path}`;
+const label = lang === 'it' ? 'English' : 'Italiano';
+---
+
+<a 
+  href={href} 
+  class="px-3 py-1 border rounded text-sm hover:bg-slate-100 transition-colors"
+  hreflang={target}
+  aria-label={`Switch to ${label}`}
+>
+  {label}
+</a>

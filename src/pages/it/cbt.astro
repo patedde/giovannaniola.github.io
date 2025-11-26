@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LanguageSwitch from '../../components/LanguageSwitch.astro';
+const lang = 'it';
+---
+
+<BaseLayout lang={lang} title="Cos'è la CBT - Giovanna Niola" description="Introduzione alla terapia cognitivo-comportamentale">
+  <Fragment slot="langswitch"><LanguageSwitch lang={lang} /></Fragment>
+  <Fragment slot="langswitch-mobile"><LanguageSwitch lang={lang} /></Fragment>
+  
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <img 
+      src="/images/placeholder-cbt.jpg" 
+      alt="Terapia cognitivo-comportamentale" 
+      class="rounded-2xl w-full h-64 object-cover mb-12" 
+      loading="lazy"
+      width="800"
+      height="400"
+    />
+    
+    <h1 class="font-serif text-3xl md:text-4xl mb-8">Cos'è la terapia cognitivo-comportamentale</h1>
+    
+    <div class="prose prose-lg max-w-none space-y-6">
+      <p class="text-slate-700 leading-relaxed">
+        La CBT (Cognitive-Behavioural Therapy) aiuta a riconoscere e modificare pensieri e comportamenti 
+        che mantengono il disagio. È un approccio strutturato, di solito a breve-medio termine.
+      </p>
+      
+      <p class="text-slate-700 leading-relaxed">
+        [Placeholder: Espandi questa sezione spiegando come funziona la CBT, quali problematiche affronta 
+        (ansia, depressione, disturbi ossessivi, ecc.), i principi fondamentali dell'approccio, 
+        e perché può essere efficace.]
+      </p>
+
+      <h2 class="font-serif text-2xl mt-12 mb-4">Come funziona una seduta</h2>
+      <p class="text-slate-700 leading-relaxed">
+        [Placeholder: Descrivi cosa aspettarsi da una seduta tipica: durata, struttura, 
+        il ruolo attivo del paziente, i compiti a casa, e il processo di valutazione e monitoraggio.]
+      </p>
+
+      <h2 class="font-serif text-2xl mt-12 mb-4">Per chi è indicata</h2>
+      <p class="text-slate-700 leading-relaxed">
+        [Placeholder: Spiega per quali tipi di persone e problematiche è particolarmente adatta la CBT, 
+        e se ci sono situazioni in cui potresti suggerire altri approcci o integrazioni.]
+      </p>
+    </div>
+  </article>
+</BaseLayout>

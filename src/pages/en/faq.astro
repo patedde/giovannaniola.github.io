@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LanguageSwitch from '../../components/LanguageSwitch.astro';
+const lang = 'en';
+
+const faqs = [
+  {
+    question: "How long is a session?",
+    answer: "Each session lasts 50 minutes. This duration allows for in-depth work while maintaining focus."
+  },
+  {
+    question: "Do you offer online sessions or only in-person?",
+    answer: "I offer both modalities. Online sessions are conducted via secure video call, while in-person sessions take place at my practice."
+  },
+  {
+    question: "Do I need a referral?",
+    answer: "No, you don't need a referral to book a private psychotherapy session."
+  },
+  {
+    question: "How can I cancel or reschedule an appointment?",
+    answer: "You can modify or cancel your appointment directly from the confirmation link you receive via email, or by contacting me at giovannaniola@gmail.com. I ask that you give at least 24 hours' notice when possible."
+  },
+  {
+    question: "How long does it take to receive a response?",
+    answer: "I typically respond within 48 business hours. If you need urgent assistance, I recommend contacting appropriate emergency services."
+  },
+  {
+    question: "How long does a therapy course last?",
+    answer: "Duration varies depending on individual goals. CBT is generally a short-to-medium term approach, but each course is tailored to specific needs."
+  },
+  {
+    question: "Do you work with adolescents?",
+    answer: "[Placeholder: Specify your target age range and whether you work with minors, and if so, whether parental presence is required]"
+  }
+];
+---
+
+<BaseLayout lang={lang} title="FAQ - Frequently asked questions" description="Answers to the most common questions about psychotherapy">
+  <Fragment slot="langswitch"><LanguageSwitch lang={lang} /></Fragment>
+  <Fragment slot="langswitch-mobile"><LanguageSwitch lang={lang} /></Fragment>
+  
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <img 
+      src="/images/placeholder-faq.jpg" 
+      alt="Frequently asked questions" 
+      class="rounded-2xl w-full h-64 object-cover mb-12" 
+      loading="lazy"
+      width="800"
+      height="400"
+    />
+    
+    <h1 class="font-serif text-3xl md:text-4xl mb-8">Frequently asked questions</h1>
+    
+    <div class="space-y-8">
+      {faqs.map((faq) => (
+        <div class="border-b pb-6">
+          <h2 class="font-serif text-xl md:text-2xl mb-3 text-slate-900">{faq.question}</h2>
+          <p class="text-slate-700 leading-relaxed">{faq.answer}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 p-6 bg-sand-50 rounded-xl border">
+      <p class="text-slate-700">
+        <strong>Can't find the answer you're looking for?</strong> Feel free to contact me via email at{' '}
+        <a href="mailto:giovannaniola@gmail.com" class="underline text-emerald-600">giovannaniola@gmail.com</a>.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

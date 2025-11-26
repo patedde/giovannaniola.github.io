@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LanguageSwitch from '../../components/LanguageSwitch.astro';
+import CalendlyEmbed from '../../components/CalendlyEmbed.astro';
+const lang = 'it';
+
+// IMPORTANT: Replace with your actual Calendly URL
+const calendlyUrl = 'https://calendly.com/YOUR_USERNAME/50min';
+---
+
+<BaseLayout lang={lang} title="Calendario - Prenota una seduta" description="Prenota un appuntamento per una seduta di psicoterapia">
+  <Fragment slot="langswitch"><LanguageSwitch lang={lang} /></Fragment>
+  <Fragment slot="langswitch-mobile"><LanguageSwitch lang={lang} /></Fragment>
+  
+  <section class="max-w-5xl mx-auto px-4 py-12">
+    <img 
+      src="/images/placeholder-calendar.jpg" 
+      alt="Calendario appuntamenti" 
+      class="rounded-2xl w-full h-56 object-cover mb-8" 
+      loading="lazy"
+      width="1000"
+      height="300"
+    />
+    
+    <div class="mb-8 space-y-4">
+      <h1 class="font-serif text-3xl md:text-4xl">Prenota una seduta</h1>
+      <p class="text-lg text-slate-700 leading-relaxed">
+        Prenota un appuntamento (50 minuti). Le disponibilità si sincronizzano automaticamente con il mio calendario Google.
+      </p>
+      <p class="text-slate-700 leading-relaxed">
+        Offro sedute sia <strong>online</strong> (via videochiamata) che <strong>in presenza</strong> nel mio studio. 
+        Seleziona l'opzione che preferisci durante la prenotazione.
+      </p>
+      <p class="text-sm text-slate-600">
+        Se hai bisogno di modificare o cancellare un appuntamento, puoi farlo direttamente dal link di conferma 
+        che riceverai via email, oppure contattami a <a href="mailto:giovannaniola@gmail.com" class="underline">giovannaniola@gmail.com</a>.
+      </p>
+    </div>
+
+    <CalendlyEmbed lang={lang} url={calendlyUrl} />
+  </section>
+</BaseLayout>

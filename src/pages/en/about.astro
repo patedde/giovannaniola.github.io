@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LanguageSwitch from '../../components/LanguageSwitch.astro';
+const lang = 'en';
+---
+
+<BaseLayout lang={lang} title="About - Giovanna Niola" description="Information about my background and therapeutic approach">
+  <Fragment slot="langswitch"><LanguageSwitch lang={lang} /></Fragment>
+  <Fragment slot="langswitch-mobile"><LanguageSwitch lang={lang} /></Fragment>
+  
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <img 
+      src="/images/placeholder-about.jpg" 
+      alt="Giovanna Niola" 
+      class="rounded-2xl w-full h-64 object-cover mb-12" 
+      loading="lazy"
+      width="800"
+      height="400"
+    />
+    
+    <section class="mb-12">
+      <h1 class="font-serif text-3xl md:text-4xl mb-6">About me</h1>
+      <div class="prose prose-lg max-w-none">
+        <p class="text-slate-700 leading-relaxed">
+          My name is Giovanna Niola and I'm a cognitive-behavioural therapist registered with the Sardinia Psychologists' Board (1/SPS).
+        </p>
+        <p class="text-slate-700 leading-relaxed mt-4">
+          [Placeholder: Insert here your professional biography, the path that led you to become a psychotherapist, 
+          your motivations and your work philosophy.]
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-serif text-2xl md:text-3xl mb-6">My approach</h2>
+      <div class="prose prose-lg max-w-none">
+        <p class="text-slate-700 leading-relaxed">
+          I use CBT methods to set clear, measurable goals. The work is collaborative and practical, 
+          with exercises between sessions.
+        </p>
+        <p class="text-slate-700 leading-relaxed mt-4">
+          [Placeholder: Describe your working method, how you structure sessions, which techniques you use most, 
+          and how you help your patients achieve their goals.]
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="font-serif text-2xl md:text-3xl mb-6">My training</h2>
+      <div class="prose prose-lg max-w-none">
+        <p class="text-slate-700 leading-relaxed">
+          [Placeholder: List your academic training, specializations, relevant continuing education courses, 
+          supervisions, and any other professional credentials you consider important to share.]
+        </p>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

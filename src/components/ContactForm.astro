@@ -1,0 +1,83 @@
+---
+/* 
+ * IMPORTANT: Replace with your actual Formspree endpoint
+ * Get one at https://formspree.io after creating your form
+ */
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID_HERE';
+const { lang = 'it' } = Astro.props;
+
+// Validation: warn if endpoint not updated
+if (FORMSPREE_ENDPOINT.includes('YOUR_FORM_ID_HERE')) {
+  console.warn('⚠️  ContactForm: Update FORMSPREE_ENDPOINT with your actual form ID');
+}
+---
+
+<form action={FORMSPREE_ENDPOINT} method="POST" class="space-y-4 max-w-xl">
+  <input type="hidden" name="_subject" value="Nuovo messaggio dal sito (Giovanna Niola)" />
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+  
+  <div>
+    <label for="name" class="block text-sm font-medium mb-1">
+      {lang === 'it' ? 'Nome' : 'Name'} <span class="text-red-600">*</span>
+    </label>
+    <input 
+      required 
+      type="text" 
+      id="name"
+      name="name" 
+      class="w-full border border-slate-300 rounded px-3 py-2 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600" 
+    />
+  </div>
+  
+  <div>
+    <label for="email" class="block text-sm font-medium mb-1">
+      Email <span class="text-red-600">*</span>
+    </label>
+    <input 
+      required 
+      type="email" 
+      id="email"
+      name="email" 
+      class="w-full border border-slate-300 rounded px-3 py-2 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600" 
+    />
+  </div>
+  
+  <div>
+    <label for="message" class="block text-sm font-medium mb-1">
+      {lang === 'it' ? 'Messaggio' : 'Message'} <span class="text-red-600">*</span>
+    </label>
+    <textarea 
+      required 
+      id="message"
+      name="message" 
+      rows="5" 
+      class="w-full border border-slate-300 rounded px-3 py-2 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600"
+    ></textarea>
+  </div>
+  
+  <!-- Minimal GDPR consent -->
+  <div class="flex items-start gap-2">
+    <input 
+      required 
+      id="consent" 
+      type="checkbox" 
+      name="consent" 
+      class="mt-1 w-4 h-4 text-emerald-600 border-slate-300 rounded focus:ring-emerald-600" 
+    />
+    <label for="consent" class="text-sm">
+      {lang === 'it'
+        ? 'Acconsento al trattamento dei dati personali per essere ricontattato/a. Ho letto la '
+        : 'I consent to the processing of my personal data to be contacted back. I have read the '}
+      <a class="underline hover:text-emerald-600" href={lang === 'it' ? '/it/privacy' : '/en/privacy'}>
+        {lang === 'it' ? 'Informativa Privacy' : 'Privacy Policy'}
+      </a>.
+    </label>
+  </div>
+  
+  <button 
+    type="submit" 
+    class="px-6 py-2 rounded bg-emerald-600 text-white hover:bg-emerald-700 transition-colors focus:ring-2 focus:ring-emerald-600 focus:ring-offset-2"
+  >
+    {lang === 'it' ? 'Invia' : 'Send'}
+  </button>
+</form>

@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LanguageSwitch from '../../components/LanguageSwitch.astro';
+const lang = 'it';
+---
+
+<BaseLayout lang={lang} title="Chi sono - Giovanna Niola" description="Informazioni sul mio percorso e approccio terapeutico">
+  <Fragment slot="langswitch"><LanguageSwitch lang={lang} /></Fragment>
+  <Fragment slot="langswitch-mobile"><LanguageSwitch lang={lang} /></Fragment>
+  
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <img 
+      src="/images/placeholder-about.jpg" 
+      alt="Giovanna Niola" 
+      class="rounded-2xl w-full h-64 object-cover mb-12" 
+      loading="lazy"
+      width="800"
+      height="400"
+    />
+    
+    <section class="mb-12">
+      <h1 class="font-serif text-3xl md:text-4xl mb-6">Chi sono</h1>
+      <div class="prose prose-lg max-w-none">
+        <p class="text-slate-700 leading-relaxed">
+          Mi chiamo Giovanna Niola e sono una psicoterapeuta cognitivo-comportamentale iscritta all'Albo degli Psicologi della Sardegna (1/SPS).
+        </p>
+        <p class="text-slate-700 leading-relaxed mt-4">
+          [Placeholder: Inserisci qui la tua biografia professionale, il percorso che ti ha portato a diventare psicoterapeuta, 
+          le tue motivazioni e la tua filosofia di lavoro.]
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-serif text-2xl md:text-3xl mb-6">Il mio approccio</h2>
+      <div class="prose prose-lg max-w-none">
+        <p class="text-slate-700 leading-relaxed">
+          Integro strumenti della CBT per obiettivi chiari e misurabili. Il percorso è collaborativo e pratico, 
+          con esercizi tra una seduta e l'altra.
+        </p>
+        <p class="text-slate-700 leading-relaxed mt-4">
+          [Placeholder: Descrivi il tuo metodo di lavoro, come strutturi le sedute, quali tecniche utilizzi maggiormente, 
+          e come aiuti i tuoi pazienti a raggiungere i loro obiettivi.]
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="font-serif text-2xl md:text-3xl mb-6">La mia formazione</h2>
+      <div class="prose prose-lg max-w-none">
+        <p class="text-slate-700 leading-relaxed">
+          [Placeholder: Elenca la tua formazione accademica, specializzazioni, corsi di aggiornamento rilevanti, 
+          supervisioni e qualsiasi altra credenziale professionale che ritieni importante condividere.]
+        </p>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

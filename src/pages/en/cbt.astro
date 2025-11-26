@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LanguageSwitch from '../../components/LanguageSwitch.astro';
+const lang = 'en';
+---
+
+<BaseLayout lang={lang} title="What's CBT - Giovanna Niola" description="Introduction to cognitive-behavioural therapy">
+  <Fragment slot="langswitch"><LanguageSwitch lang={lang} /></Fragment>
+  <Fragment slot="langswitch-mobile"><LanguageSwitch lang={lang} /></Fragment>
+  
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <img 
+      src="/images/placeholder-cbt.jpg" 
+      alt="Cognitive-behavioural therapy" 
+      class="rounded-2xl w-full h-64 object-cover mb-12" 
+      loading="lazy"
+      width="800"
+      height="400"
+    />
+    
+    <h1 class="font-serif text-3xl md:text-4xl mb-8">What is cognitive-behavioural therapy</h1>
+    
+    <div class="prose prose-lg max-w-none space-y-6">
+      <p class="text-slate-700 leading-relaxed">
+        CBT (Cognitive-Behavioural Therapy) helps identify and change patterns of thoughts and behaviours 
+        that maintain distress. It's structured and often time-limited.
+      </p>
+      
+      <p class="text-slate-700 leading-relaxed">
+        [Placeholder: Expand this section explaining how CBT works, which issues it addresses 
+        (anxiety, depression, OCD, etc.), the fundamental principles of the approach, 
+        and why it can be effective.]
+      </p>
+
+      <h2 class="font-serif text-2xl mt-12 mb-4">How a session works</h2>
+      <p class="text-slate-700 leading-relaxed">
+        [Placeholder: Describe what to expect from a typical session: duration, structure, 
+        the active role of the patient, homework assignments, and the assessment and monitoring process.]
+      </p>
+
+      <h2 class="font-serif text-2xl mt-12 mb-4">Who is it for</h2>
+      <p class="text-slate-700 leading-relaxed">
+        [Placeholder: Explain for which types of people and issues CBT is particularly suitable, 
+        and if there are situations where you might suggest other approaches or integrations.]
+      </p>
+    </div>
+  </article>
+</BaseLayout>

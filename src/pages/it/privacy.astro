@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LanguageSwitch from '../../components/LanguageSwitch.astro';
+const lang = 'it';
+---
+
+<BaseLayout lang={lang} title="Privacy Policy - Informativa Privacy" description="Informativa sul trattamento dei dati personali">
+  <Fragment slot="langswitch"><LanguageSwitch lang={lang} /></Fragment>
+  <Fragment slot="langswitch-mobile"><LanguageSwitch lang={lang} /></Fragment>
+  
+  <article class="max-w-4xl mx-auto px-4 py-12 prose prose-lg">
+    <h1 class="font-serif text-3xl md:text-4xl mb-8">Informativa Privacy</h1>
+    
+    <p class="text-sm text-slate-600">Ultimo aggiornamento: {new Date().toLocaleDateString('it-IT')}</p>
+
+    <section class="mt-8">
+      <h2 class="font-serif text-2xl mb-4">1. Titolare del trattamento</h2>
+      <p>
+        Il titolare del trattamento dei dati personali è <strong>Giovanna Niola</strong>, 
+        Psicoterapeuta cognitivo-comportamentale, iscritta all'Albo degli Psicologi della Sardegna (1/SPS).
+      </p>
+      <p>
+        Email: <a href="mailto:giovannaniola@gmail.com" class="underline">giovannaniola@gmail.com</a>
+      </p>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="font-serif text-2xl mb-4">2. Dati raccolti</h2>
+      <p>Attraverso questo sito web raccogliamo:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Dati forniti volontariamente:</strong> nome, email e messaggio tramite il modulo di contatto</li>
+        <li><strong>Dati di prenotazione:</strong> informazioni fornite attraverso il calendario Calendly (nome, email, data/ora dell'appuntamento)</li>
+        <li><strong>Cookie tecnici:</strong> consenso all'uso di Calendly (widget di prenotazione che può impostare cookie)</li>
+      </ul>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="font-serif text-2xl mb-4">3. Finalità del trattamento</h2>
+      <p>I dati vengono trattati per:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Rispondere alle richieste di contatto</li>
+        <li>Gestire le prenotazioni degli appuntamenti</li>
+        <li>Fornire servizi di psicoterapia</li>
+      </ul>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="font-serif text-2xl mb-4">4. Base giuridica</h2>
+      <p>
+        Il trattamento si basa sul <strong>consenso esplicito</strong> dell'interessato (art. 6, comma 1, lett. a GDPR) 
+        e sull'<strong>esecuzione di misure precontrattuali</strong> adottate su richiesta dell'interessato (art. 6, comma 1, lett. b GDPR).
+      </p>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="font-serif text-2xl mb-4">5. Conservazione dei dati</h2>
+      <p>
+        I dati saranno conservati per il tempo strettamente necessario alle finalità per cui sono stati raccolti 
+        e comunque nel rispetto degli obblighi di legge (per i dati clinici: 10 anni dalla conclusione del trattamento, 
+        come previsto dal Codice Deontologico degli Psicologi).
+      </p>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="font-serif text-2xl mb-4">6. Comunicazione e diffusione</h2>
+      <p>
+        I dati personali non saranno comunicati a terzi né diffusi, salvo:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Obblighi di legge</li>
+        <li>Servizi tecnici necessari (Formspree per email, Calendly per prenotazioni)</li>
+      </ul>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="font-serif text-2xl mb-4">7. Diritti dell'interessato</h2>
+      <p>Ai sensi degli artt. 15-22 del GDPR, l'interessato ha diritto di:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Accedere ai propri dati personali</li>
+        <li>Ottenere la rettifica o la cancellazione degli stessi</li>
+        <li>Ottenere la limitazione del trattamento</li>
+        <li>Opporsi al trattamento</li>
+        <li>Richiedere la portabilità dei dati</li>
+        <li>Revocare il consenso in qualsiasi momento</li>
+        <li>Proporre reclamo all'Autorità Garante per la Protezione dei Dati Personali</li>
+      </ul>
+      <p class="mt-4">
+        Per esercitare i propri diritti, contattare: <a href="mailto:giovannaniola@gmail.com" class="underline">giovannaniola@gmail.com</a>
+      </p>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="font-serif text-2xl mb-4">8. Cookie e servizi terzi</h2>
+      <p>
+        Questo sito non utilizza cookie analitici o di profilazione. Viene utilizzato:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Calendly:</strong> widget di prenotazione che può impostare cookie tecnici. 
+        Il widget viene caricato solo dopo il consenso esplicito dell'utente.</li>
+      </ul>
+      <p class="mt-4">
+        È possibile gestire le preferenze sui cookie attraverso il banner di consenso visualizzato nella pagina calendario.
+      </p>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="font-serif text-2xl mb-4">9. Modifiche alla presente informativa</h2>
+      <p>
+        Questa informativa può essere aggiornata periodicamente. La data dell'ultimo aggiornamento è indicata in alto.
+      </p>
+    </section>
+
+    <div class="mt-12 p-6 bg-slate-50 rounded-xl border">
+      <p class="text-sm">
+        <strong>Domande o dubbi?</strong> Per qualsiasi chiarimento sulla privacy e sul trattamento dei dati, 
+        non esitare a contattarmi a <a href="mailto:giovannaniola@gmail.com" class="underline">giovannaniola@gmail.com</a>
+      </p>
+    </div>
+  </article>
+</BaseLayout>

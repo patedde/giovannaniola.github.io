@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LanguageSwitch from '../../components/LanguageSwitch.astro';
+const lang = 'it';
+
+const faqs = [
+  {
+    question: "Quanto dura una seduta?",
+    answer: "Ogni seduta dura 50 minuti. Questo tempo permette di lavorare in modo approfondito mantenendo la concentrazione."
+  },
+  {
+    question: "Offri sedute online o solo in presenza?",
+    answer: "Offro entrambe le modalità. Le sedute online si svolgono tramite videochiamata sicura, mentre quelle in presenza si tengono nel mio studio."
+  },
+  {
+    question: "Serve l'impegnativa del medico?",
+    answer: "No, non è necessaria un'impegnativa per prenotare una seduta privata di psicoterapia."
+  },
+  {
+    question: "Come posso cancellare o spostare un appuntamento?",
+    answer: "Puoi modificare o cancellare l'appuntamento direttamente dal link di conferma che ricevi via email, oppure contattandomi all'indirizzo giovannaniola@gmail.com. Ti chiedo di avvisare con almeno 24 ore di anticipo quando possibile."
+  },
+  {
+    question: "Quanto tempo ci vuole per ricevere una risposta?",
+    answer: "Di norma rispondo entro 48 ore lavorative. Se hai bisogno urgente di assistenza, ti consiglio di contattare i servizi di emergenza appropriati."
+  },
+  {
+    question: "Quanto dura un percorso di terapia?",
+    answer: "La durata varia a seconda degli obiettivi individuali. La CBT è generalmente un approccio a breve-medio termine, ma ogni percorso è personalizzato sulle esigenze specifiche."
+  },
+  {
+    question: "Lavori con adolescenti?",
+    answer: "[Placeholder: Specifica la tua fascia d'età target e se lavori con minori, in tal caso se richiedi la presenza dei genitori]"
+  }
+];
+---
+
+<BaseLayout lang={lang} title="FAQ - Domande frequenti" description="Risposte alle domande più comuni sulla psicoterapia">
+  <Fragment slot="langswitch"><LanguageSwitch lang={lang} /></Fragment>
+  <Fragment slot="langswitch-mobile"><LanguageSwitch lang={lang} /></Fragment>
+  
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <img 
+      src="/images/placeholder-faq.jpg" 
+      alt="Domande frequenti" 
+      class="rounded-2xl w-full h-64 object-cover mb-12" 
+      loading="lazy"
+      width="800"
+      height="400"
+    />
+    
+    <h1 class="font-serif text-3xl md:text-4xl mb-8">Domande frequenti</h1>
+    
+    <div class="space-y-8">
+      {faqs.map((faq) => (
+        <div class="border-b pb-6">
+          <h2 class="font-serif text-xl md:text-2xl mb-3 text-slate-900">{faq.question}</h2>
+          <p class="text-slate-700 leading-relaxed">{faq.answer}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 p-6 bg-sand-50 rounded-xl border">
+      <p class="text-slate-700">
+        <strong>Non trovi la risposta che cerchi?</strong> Contattami pure via email a{' '}
+        <a href="mailto:giovannaniola@gmail.com" class="underline text-emerald-600">giovannaniola@gmail.com</a>.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

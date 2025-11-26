@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LanguageSwitch from '../../components/LanguageSwitch.astro';
+const lang = 'en';
+---
+
+<BaseLayout lang={lang} title="Privacy Policy" description="Information on personal data processing">
+  <Fragment slot="langswitch"><LanguageSwitch lang={lang} /></Fragment>
+  <Fragment slot="langswitch-mobile"><LanguageSwitch lang={lang} /></Fragment>
+  
+  <article class="max-w-4xl mx-auto px-4 py-12 prose prose-lg">
+    <h1 class="font-serif text-3xl md:text-4xl mb-8">Privacy Policy</h1>
+    
+    <p class="text-sm text-slate-600">Last updated: {new Date().toLocaleDateString('en-US')}</p>
+
+    <section class="mt-8">
+      <h2 class="font-serif text-2xl mb-4">1. Data Controller</h2>
+      <p>
+        The data controller is <strong>Giovanna Niola</strong>, 
+        Cognitive-behavioural therapist, registered with the Sardinia Psychologists' Board (1/SPS).
+      </p>
+      <p>
+        Email: <a href="mailto:giovannaniola@gmail.com" class="underline">giovannaniola@gmail.com</a>
+      </p>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="font-serif text-2xl mb-4">2. Data Collected</h2>
+      <p>Through this website we collect:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Voluntarily provided data:</strong> name, email, and message via the contact form</li>
+        <li><strong>Booking data:</strong> information provided through the Calendly calendar (name, email, appointment date/time)</li>
+        <li><strong>Technical cookies:</strong> consent to use Calendly (booking widget that may set cookies)</li>
+      </ul>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="font-serif text-2xl mb-4">3. Processing Purposes</h2>
+      <p>Data is processed to:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Respond to contact requests</li>
+        <li>Manage appointment bookings</li>
+        <li>Provide psychotherapy services</li>
+      </ul>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="font-serif text-2xl mb-4">4. Legal Basis</h2>
+      <p>
+        Processing is based on the <strong>explicit consent</strong> of the data subject (Art. 6(1)(a) GDPR) 
+        and on the <strong>performance of pre-contractual measures</strong> taken at the request of the data subject (Art. 6(1)(b) GDPR).
+      </p>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="font-serif text-2xl mb-4">5. Data Retention</h2>
+      <p>
+        Data will be retained for the time strictly necessary for the purposes for which it was collected 
+        and in any case in compliance with legal obligations (for clinical data: 10 years from the end of treatment, 
+        as required by the Psychologists' Code of Ethics).
+      </p>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="font-serif text-2xl mb-4">6. Communication and Disclosure</h2>
+      <p>
+        Personal data will not be communicated to third parties or disclosed, except for:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Legal obligations</li>
+        <li>Necessary technical services (Formspree for email, Calendly for bookings)</li>
+      </ul>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="font-serif text-2xl mb-4">7. Data Subject Rights</h2>
+      <p>Pursuant to Arts. 15-22 of the GDPR, the data subject has the right to:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Access their personal data</li>
+        <li>Obtain rectification or erasure of data</li>
+        <li>Obtain restriction of processing</li>
+        <li>Object to processing</li>
+        <li>Request data portability</li>
+        <li>Withdraw consent at any time</li>
+        <li>Lodge a complaint with the Data Protection Authority</li>
+      </ul>
+      <p class="mt-4">
+        To exercise your rights, contact: <a href="mailto:giovannaniola@gmail.com" class="underline">giovannaniola@gmail.com</a>
+      </p>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="font-serif text-2xl mb-4">8. Cookies and Third-Party Services</h2>
+      <p>
+        This site does not use analytics or profiling cookies. The following is used:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Calendly:</strong> booking widget that may set technical cookies. 
+        The widget is loaded only after explicit user consent.</li>
+      </ul>
+      <p class="mt-4">
+        Cookie preferences can be managed through the consent banner displayed on the calendar page.
+      </p>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="font-serif text-2xl mb-4">9. Changes to this Policy</h2>
+      <p>
+        This policy may be updated periodically. The date of the last update is indicated at the top.
+      </p>
+    </section>
+
+    <div class="mt-12 p-6 bg-slate-50 rounded-xl border">
+      <p class="text-sm">
+        <strong>Questions or concerns?</strong> For any clarification about privacy and data processing, 
+        feel free to contact me at <a href="mailto:giovannaniola@gmail.com" class="underline">giovannaniola@gmail.com</a>
+      </p>
+    </div>
+  </article>
+</BaseLayout>

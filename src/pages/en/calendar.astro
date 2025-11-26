@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LanguageSwitch from '../../components/LanguageSwitch.astro';
+import CalendlyEmbed from '../../components/CalendlyEmbed.astro';
+const lang = 'en';
+
+// IMPORTANT: Replace with your actual Calendly URL
+const calendlyUrl = 'https://calendly.com/YOUR_USERNAME/50min';
+---
+
+<BaseLayout lang={lang} title="Calendar - Book a session" description="Book an appointment for a psychotherapy session">
+  <Fragment slot="langswitch"><LanguageSwitch lang={lang} /></Fragment>
+  <Fragment slot="langswitch-mobile"><LanguageSwitch lang={lang} /></Fragment>
+  
+  <section class="max-w-5xl mx-auto px-4 py-12">
+    <img 
+      src="/images/placeholder-calendar.jpg" 
+      alt="Appointment calendar" 
+      class="rounded-2xl w-full h-56 object-cover mb-8" 
+      loading="lazy"
+      width="1000"
+      height="300"
+    />
+    
+    <div class="mb-8 space-y-4">
+      <h1 class="font-serif text-3xl md:text-4xl">Book a session</h1>
+      <p class="text-lg text-slate-700 leading-relaxed">
+        Book an appointment (50 minutes). Availability syncs automatically with my Google Calendar.
+      </p>
+      <p class="text-slate-700 leading-relaxed">
+        I offer both <strong>online</strong> sessions (via video call) and <strong>in-person</strong> sessions at my practice. 
+        Select your preferred option during booking.
+      </p>
+      <p class="text-sm text-slate-600">
+        If you need to modify or cancel an appointment, you can do so directly from the confirmation link 
+        you'll receive via email, or contact me at <a href="mailto:giovannaniola@gmail.com" class="underline">giovannaniola@gmail.com</a>.
+      </p>
+    </div>
+
+    <CalendlyEmbed lang={lang} url={calendlyUrl} />
+  </section>
+</BaseLayout>
