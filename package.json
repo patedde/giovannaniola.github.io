@@ -13,6 +13,6 @@
     "tailwindcss": "^3.4.0"
   },
   "devDependencies": {
-    "@astrojs/static": "^1.0.0"
+    "@astrojs/adapter-static": "^3.0.0"
   }
 }
