@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind';
 import staticAdapter from '@astrojs/static'; 
 
 export default defineConfig({
-  site: 'https://terapianiola.com',
+  site: 'https://niolaterapia.com',
   output: 'static',
   adapter: staticAdapter(),
   integrations: [tailwind()],
