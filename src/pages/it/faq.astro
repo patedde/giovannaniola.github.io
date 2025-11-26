@@ -5,32 +5,52 @@ const lang = 'it';
 
 const faqs = [
   {
-    question: "Quanto dura una seduta?",
-    answer: "Ogni seduta dura 50 minuti. Questo tempo permette di lavorare in modo approfondito mantenendo la concentrazione."
+    question: "Come funziona la terapia con Giovanna?",
+    answer: `Mi impegno a creare un ambiente di supporto e confidenziale, dove potrai esplorare liberamente i tuoi pensieri, emozioni ed esperienze. Il mio obiettivo è adattare il percorso terapeutico alle tue esigenze specifiche e aiutarti a raggiungere i tuoi obiettivi.`
   },
   {
-    question: "Offri sedute online o solo in presenza?",
-    answer: "Offro entrambe le modalità. Le sedute online si svolgono tramite videochiamata sicura, mentre quelle in presenza si tengono nel mio studio."
+    question: "Come posso sapere se la terapia è adatta a me?",
+    answer: `La terapia può essere utile per chiunque, che tu stia affrontando difficoltà significative o desideri semplicemente un percorso di crescita personale. Non esiste una "condizione" specifica per iniziare: se la curiosità ti spinge, spesso è un buon motivo per provare.
+
+Durante la prima sessione, ti chiederò di compilare un questionario sull'umore per aiutarci a capire meglio le tue necessità. Questo ci permetterà di concentrarci sulle aree che vuoi esplorare, e di costruire insieme un approccio personalizzato.`
   },
   {
-    question: "Serve l'impegnativa del medico?",
-    answer: "No, non è necessaria un'impegnativa per prenotare una seduta privata di psicoterapia."
+    question: "Ciò che condivido è confidenziale?",
+    answer: `Sì, la confidenzialità è una base fondamentale della terapia. Ti spiegherò i limiti della riservatezza durante il primo incontro, affinché tu possa sentirti sicuro nel condividere i tuoi pensieri e le tue esperienze.
+
+Tuttavia, esistono alcune circostanze in cui la confidenzialità potrebbe essere limitata, come nel caso di rischi per la tua incolumità o obblighi legali. Discuterò apertamente di queste situazioni, per garantire chiarezza e trasparenza.`
   },
   {
-    question: "Come posso cancellare o spostare un appuntamento?",
-    answer: "Puoi modificare o cancellare l'appuntamento direttamente dal link di conferma che ricevi via email, oppure contattandomi all'indirizzo giovannaniola@gmail.com. Ti chiedo di avvisare con almeno 24 ore di anticipo quando possibile."
+    question: "Di quante sessioni avrò bisogno?",
+    answer: `Il numero di sessioni dipende dalle tue esigenze personali e dagli obiettivi che desideri raggiungere. Per alcuni, bastano poche sessioni per affrontare un problema specifico, mentre altri potrebbero trarre beneficio da un supporto più lungo.
+
+Generalmente, raccomando di fare una valutazione dei progressi ogni 6-10 sessioni per monitorare l'andamento della terapia e pianificare i passaggi successivi. Offro sia percorsi brevi che lunghi, a seconda delle tue preferenze.`
   },
   {
-    question: "Quanto tempo ci vuole per ricevere una risposta?",
-    answer: "Di norma rispondo entro 48 ore lavorative. Se hai bisogno urgente di assistenza, ti consiglio di contattare i servizi di emergenza appropriati."
+    question: "Quali sono i costi della terapia?",
+    answer: `Il costo delle sessioni è di 50 euro per una sessione di 50 minuti. Se hai domande riguardo al prezzo o alle modalità di pagamento, non esitare a contattarmi.`
   },
   {
-    question: "Quanto dura un percorso di terapia?",
-    answer: "La durata varia a seconda degli obiettivi individuali. La CBT è generalmente un approccio a breve-medio termine, ma ogni percorso è personalizzato sulle esigenze specifiche."
+    question: "Cosa posso aspettarmi dal primo appuntamento?",
+    answer: `Il primo incontro è un'opportunità per esplorare insieme i tuoi obiettivi e le difficoltà che desideri affrontare. Ti farò delle domande per comprendere meglio il tuo background e le tue esperienze, in modo da sviluppare un piano personalizzato che risponda alle tue necessità.
+
+Questa sessione ti permette anche di valutare se sono la persona giusta per te. Costruire una solida relazione terapeutica è cruciale per il successo della terapia, e sarò qui per supportarti in questo processo.`
   },
   {
-    question: "Lavori con adolescenti?",
-    answer: "[Placeholder: Specifica la tua fascia d'età target e se lavori con minori, in tal caso se richiedi la presenza dei genitori]"
+    question: "Perché usiamo i questionari?",
+    answer: `I questionari ci aiutano a comprendere meglio il tuo stato emotivo e mentale, individuando le aree in cui potresti crescere. Servono anche a monitorare i progressi nel tempo.
+
+Se preferisci non compilare i questionari, rispetterò la tua scelta e troveremo insieme un altro modo per rendere il percorso terapeutico efficace e confortevole.`
+  },
+  {
+    question: "Cosa succede se devo cancellare o riprogrammare un appuntamento?",
+    answer: `Comprendo che la vita può essere imprevedibile. Se hai bisogno di cancellare o riprogrammare un appuntamento, ti chiedo di avvisarmi almeno 48 ore prima, per evitare eventuali addebiti.
+
+Le cancellazioni con meno di 48 ore di preavviso o gli appuntamenti mancati potrebbero comportare un addebito. In caso di necessità da parte mia di riprogrammare un incontro, cercherò di darti il massimo preavviso possibile.`
+  },
+  {
+    question: "Cosa succede se voglio terminare la terapia?",
+    answer: `Se desideri interrompere la terapia, sei libero di farlo in qualsiasi momento. Ti incoraggio a discuterne durante una sessione, in modo da garantire una transizione serena e affrontare eventuali preoccupazioni finali. Se preferisci, puoi anche avvisarmi via email, nel modo che ti è più comodo.`
   }
 ];
 ---
@@ -38,31 +58,39 @@ const faqs = [
 <BaseLayout lang={lang} title="FAQ - Domande frequenti" description="Risposte alle domande più comuni sulla psicoterapia">
   <Fragment slot="langswitch"><LanguageSwitch lang={lang} /></Fragment>
   <Fragment slot="langswitch-mobile"><LanguageSwitch lang={lang} /></Fragment>
-  
+   
   <article class="max-w-4xl mx-auto px-4 py-12">
     <img 
       src="/images/placeholder-faq.jpg" 
       alt="Domande frequenti" 
-      class="rounded-2xl w-full h-64 object-cover mb-12" 
+      class="rounded-2xl w-full h-auto mb-10 shadow-sm" 
       loading="lazy"
       width="800"
       height="400"
     />
     
-    <h1 class="font-serif text-3xl md:text-4xl mb-8">Domande frequenti</h1>
+    <div class="mb-12">
+      <h1 class="font-serif text-3xl md:text-4xl mb-6">Domande Frequenti sulla Terapia</h1>
+      <p class="text-lg text-slate-700 leading-relaxed">
+        Qui sotto troverai le risposte ad alcune delle domande più comuni sui miei servizi di terapia. 
+        Se hai altre domande o desideri maggiori informazioni, non esitare a contattarmi via email a 
+        <a href="mailto:giovannaniola@gmail.com" class="underline hover:text-emerald-600">giovannaniola@gmail.com</a> 
+        o telefonicamente al <a href="tel:+393518635200" class="underline hover:text-emerald-600">351 863 5200</a>.
+      </p>
+    </div>
     
     <div class="space-y-8">
       {faqs.map((faq) => (
-        <div class="border-b pb-6">
-          <h2 class="font-serif text-xl md:text-2xl mb-3 text-slate-900">{faq.question}</h2>
-          <p class="text-slate-700 leading-relaxed">{faq.answer}</p>
+        <div class="border-b pb-8">
+          <h2 class="font-serif text-xl md:text-2xl mb-4 text-slate-900">{faq.question}</h2>
+          <p class="text-slate-700 leading-relaxed whitespace-pre-line">{faq.answer}</p>
         </div>
       ))}
     </div>
 
-    <div class="mt-12 p-6 bg-sand-50 rounded-xl border">
+    <div class="mt-12 p-6 bg-slate-50 rounded-xl border border-slate-200">
       <p class="text-slate-700">
-        <strong>Non trovi la risposta che cerchi?</strong> Contattami pure via email a{' '}
+        <strong>Hai ancora dubbi?</strong> Scrivimi pure a{' '}
         <a href="mailto:giovannaniola@gmail.com" class="underline text-emerald-600">giovannaniola@gmail.com</a>.
       </p>
     </div>
