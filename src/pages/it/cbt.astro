@@ -7,42 +7,87 @@ const lang = 'it';
 <BaseLayout lang={lang} title="Cos'è la CBT - Giovanna Niola" description="Introduzione alla terapia cognitivo-comportamentale">
   <Fragment slot="langswitch"><LanguageSwitch lang={lang} /></Fragment>
   <Fragment slot="langswitch-mobile"><LanguageSwitch lang={lang} /></Fragment>
-  
+   
   <article class="max-w-4xl mx-auto px-4 py-12">
     <img 
-      src="/images/placeholder-cbt.jpg" 
+      src="/images/cbt_it.jpg" 
       alt="Terapia cognitivo-comportamentale" 
-      class="rounded-2xl w-full h-64 object-cover mb-12" 
+      class="rounded-2xl w-full h-64 md:h-80 object-cover mb-10 shadow-sm" 
       loading="lazy"
       width="800"
       height="400"
     />
     
-    <h1 class="font-serif text-3xl md:text-4xl mb-8">Cos'è la terapia cognitivo-comportamentale</h1>
-    
-    <div class="prose prose-lg max-w-none space-y-6">
-      <p class="text-slate-700 leading-relaxed">
-        La CBT (Cognitive-Behavioural Therapy) aiuta a riconoscere e modificare pensieri e comportamenti 
-        che mantengono il disagio. È un approccio strutturato, di solito a breve-medio termine.
+    <header class="mb-10">
+      <h1 class="font-serif text-3xl md:text-4xl mb-6 text-slate-900">Cos'è la terapia cognitivo-comportamentale</h1>
+      <div class="prose prose-lg max-w-none text-slate-700 leading-relaxed">
+        <p class="mb-4">
+          La Terapia Cognitivo-Comportamentale (CBT) è una forma altamente efficace di psicoterapia che si concentra sull'identificazione e la modifica dei modelli di pensiero e comportamento disfunzionali. 
+        </p>
+        <p>
+          Si basa sulla comprensione che i nostri pensieri, emozioni e comportamenti sono interconnessi: affrontando e modificando questi schemi è possibile migliorare il benessere generale.
+          Originata negli anni '60, la CBT è oggi un trattamento di prima linea raccomandato dalle linee guida internazionali (come il NICE nel Regno Unito) per diversi disturbi psicologici.
+        </p>
+      </div>
+    </header>
+
+    <div class="prose prose-lg max-w-none text-slate-700 leading-relaxed">
+      <h2 class="font-serif text-2xl text-slate-900 mb-4">A chi si rivolge</h2>
+      <p>
+        L'obiettivo della CBT è aiutare gli individui a sviluppare strategie di coping efficaci. Si tratta di una terapia a tempo limitato e orientata agli obiettivi, efficace per:
       </p>
-      
-      <p class="text-slate-700 leading-relaxed">
-        [Placeholder: Espandi questa sezione spiegando come funziona la CBT, quali problematiche affronta 
-        (ansia, depressione, disturbi ossessivi, ecc.), i principi fondamentali dell'approccio, 
-        e perché può essere efficace.]
+      <ul class="list-disc pl-5 my-6 space-y-2">
+        <li>Disturbi d'ansia e attacchi di panico</li>
+        <li>Depressione</li>
+        <li>Fobie specifiche</li>
+        <li>Disturbo ossessivo-compulsivo (DOC)</li>
+        <li>Disturbo da stress post-traumatico (PTSD)</li>
+      </ul>
+      <p>
+        Attraverso l'apprendimento di nuove abilità, puoi acquisire un maggiore controllo sui tuoi pensieri e comportamenti, migliorando l'autostima e la qualità della tua vita.
       </p>
 
-      <h2 class="font-serif text-2xl mt-12 mb-4">Come funziona una seduta</h2>
-      <p class="text-slate-700 leading-relaxed">
-        [Placeholder: Descrivi cosa aspettarsi da una seduta tipica: durata, struttura, 
-        il ruolo attivo del paziente, i compiti a casa, e il processo di valutazione e monitoraggio.]
+      <hr class="border-slate-200 my-12" />
+
+      <h2 class="font-serif text-2xl text-slate-900 mb-6">In cosa consiste il percorso</h2>
+      <p class="mb-8">
+        Ecco cosa puoi generalmente aspettarti nelle tre fasi principali del lavoro insieme:
       </p>
 
-      <h2 class="font-serif text-2xl mt-12 mb-4">Per chi è indicata</h2>
-      <p class="text-slate-700 leading-relaxed">
-        [Placeholder: Spiega per quali tipi di persone e problematiche è particolarmente adatta la CBT, 
-        e se ci sono situazioni in cui potresti suggerire altri approcci o integrazioni.]
-      </p>
+      <div class="space-y-10">
+        
+        <div>
+          <h3 class="font-serif text-xl text-slate-900 font-medium mb-2">1. La Valutazione</h3>
+          <p>
+            Nella fase iniziale lavoreremo insieme per raccogliere informazioni sulle difficoltà attuali, i sintomi e i tuoi obiettivi. 
+            Discuteremo la tua storia personale ed esploreremo i fattori che contribuiscono al problema. Questa fase serve a costruire una "mappa" condivisa e un piano di trattamento su misura per le tue esigenze.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-serif text-xl text-slate-900 font-medium mb-2">2. Il Trattamento</h3>
+          <p>
+            Durante le sedute ci impegneremo in discussioni attive. Esploreremo i pensieri e le credenze che alimentano le emozioni dolorose e impareremo a riformularli. 
+            Identificheremo le "trappole mentali" (distorsioni cognitive) e utilizzeremo tecniche pratiche per affrontarle. L'obiettivo non è solo parlare, ma fornirti una cassetta degli attrezzi per gestire lo stress.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-serif text-xl text-slate-900 font-medium mb-2">3. I Compiti a casa (Home practice)</h3>
+          <p>
+            La CBT è una terapia attiva. Tra una seduta e l'altra ti inviterò a svolgere piccoli esercizi per rafforzare ciò che abbiamo imparato. 
+            Potrebbe trattarsi di tenere un diario dei pensieri, praticare una tecnica di rilassamento o sperimentare un nuovo comportamento. Questo lavoro è cruciale per portare i cambiamenti fuori dalla stanza di terapia, nella tua vita reale.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="bg-slate-50 p-6 rounded-xl mt-12 border-l-4 border-slate-300">
+        <p class="text-base italic m-0">
+          <strong>Nota bene:</strong> Il processo è altamente collaborativo. Il tuo coinvolgimento attivo è il motore principale del cambiamento. La struttura delle sedute sarà sempre adattata alle tue circostanze uniche e ai tuoi ritmi.
+        </p>
+      </div>
+
     </div>
   </article>
 </BaseLayout>
