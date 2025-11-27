@@ -4,45 +4,94 @@ import LanguageSwitch from '../../components/LanguageSwitch.astro';
 const lang = 'en';
 ---
 
-<BaseLayout lang={lang} title="What's CBT - Giovanna Niola" description="Introduction to cognitive-behavioural therapy">
+<BaseLayout lang={lang} title="What is CBT - Giovanna Niola" description="Introduction to Cognitive Behavioural Therapy">
   <Fragment slot="langswitch"><LanguageSwitch lang={lang} /></Fragment>
   <Fragment slot="langswitch-mobile"><LanguageSwitch lang={lang} /></Fragment>
-  
+    
   <article class="max-w-4xl mx-auto px-4 py-12">
     <img 
-      src="/images/placeholder-cbt.jpg" 
-      alt="Cognitive-behavioural therapy" 
-      class="rounded-2xl w-full h-64 object-cover mb-12" 
+      src="/images/cbt_it.jpg" 
+      alt="Cognitive Behavioural Therapy" 
+      class="rounded-2xl w-full h-auto mb-10 shadow-sm" 
       loading="lazy"
       width="800"
       height="400"
     />
     
-    <h1 class="font-serif text-3xl md:text-4xl mb-8">What is cognitive-behavioural therapy</h1>
-    
-    <div class="prose prose-lg max-w-none space-y-6">
-      <p class="text-slate-700 leading-relaxed">
-        CBT (Cognitive-Behavioural Therapy) helps identify and change patterns of thoughts and behaviours 
-        that maintain distress. It's structured and often time-limited.
+    <header class="mb-10">
+      <h1 class="font-serif text-3xl md:text-4xl mb-6 text-slate-900">What is Cognitive Behavioural Therapy</h1>
+      <div class="prose prose-lg max-w-none text-slate-700 leading-relaxed">
+        <p class="mb-4">
+          Cognitive Behavioural Therapy (CBT) is a highly effective form of psychotherapy that focuses on identifying and modifying dysfunctional patterns of thinking and behaviour. 
+        </p>
+        <p>
+          It is based on the understanding that our thoughts, emotions, and behaviours are interconnected: by addressing and changing these patterns, it is possible to improve general well-being.
+          Originating in the 1960s, CBT is today a first-line treatment recommended by international guidelines (such as NICE in the UK) for various psychological disorders.
+        </p>
+      </div>
+    </header>
+
+    <div class="prose prose-lg max-w-none text-slate-700 leading-relaxed">
+      <h2 class="font-serif text-2xl text-slate-900 mb-4">Who is it for?</h2>
+      <p>
+        The goal of CBT is to help individuals develop effective coping strategies. It is a time-limited and goal-oriented therapy, effective for:
       </p>
-      
-      <p class="text-slate-700 leading-relaxed">
-        [Placeholder: Expand this section explaining how CBT works, which issues it addresses 
-        (anxiety, depression, OCD, etc.), the fundamental principles of the approach, 
-        and why it can be effective.]
+      <ul class="list-disc pl-5 my-6 space-y-2">
+        <li>Anxiety disorders (Generalised Anxiety, Panic Attacks, Social Anxiety, Phobias)</li>
+        <li>Depression</li>
+        <li>Obsessive-Compulsive Disorder (OCD)</li>
+        <li>Self-esteem issues</li>
+        <li>Post-Traumatic Stress Disorder (PTSD)</li>
+        <li>Stress and burnout management</li>
+        <li>Emotional regulation difficulties (anger, impulsivity, rumination)</li>
+        <li>Insomnia (CBT-I)</li>
+        <li>Relationship issues or dysfunctional behaviours (perfectionism, procrastination, emotional dependency)</li>
+      </ul>
+      <p>
+        By learning new skills, you can gain greater control over your thoughts and behaviours, improving your self-esteem and quality of life.
       </p>
 
-      <h2 class="font-serif text-2xl mt-12 mb-4">How a session works</h2>
-      <p class="text-slate-700 leading-relaxed">
-        [Placeholder: Describe what to expect from a typical session: duration, structure, 
-        the active role of the patient, homework assignments, and the assessment and monitoring process.]
+      <hr class="border-slate-200 my-12" />
+
+      <h2 class="font-serif text-2xl text-slate-900 mb-6">What to expect</h2>
+      <p class="mb-8">
+        Here is generally what you can expect during the three main phases of our work together:
       </p>
 
-      <h2 class="font-serif text-2xl mt-12 mb-4">Who is it for</h2>
-      <p class="text-slate-700 leading-relaxed">
-        [Placeholder: Explain for which types of people and issues CBT is particularly suitable, 
-        and if there are situations where you might suggest other approaches or integrations.]
-      </p>
+      <div class="space-y-10">
+        
+        <div>
+          <h3 class="font-serif text-xl text-slate-900 font-medium mb-2">1. The Assessment</h3>
+          <p>
+            In the initial phase, we will work together to gather information about your current difficulties, symptoms, and goals. 
+            We will discuss your personal history and explore the factors contributing to the problem. This stage serves to build a shared "map" and a treatment plan tailored to your needs.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-serif text-xl text-slate-900 font-medium mb-2">2. The Treatment</h3>
+          <p>
+            During sessions, we will engage in active discussion. We will explore the thoughts and beliefs that fuel painful emotions and learn to reframe them. 
+            We will identify "mental traps" (cognitive distortions) and use practical techniques to address them. The goal is not just to talk, but to provide you with a toolkit to manage stress.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-serif text-xl text-slate-900 font-medium mb-2">3. Home Practice</h3>
+          <p>
+            CBT is an active therapy. Between sessions, I will invite you to do small exercises to reinforce what we have learned. 
+            This might involve keeping a thought diary, practicing a relaxation technique, or testing a new behaviour. This work is crucial for bringing changes out of the therapy room and into your real life.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="bg-slate-50 p-6 rounded-xl mt-12 border-l-4 border-slate-300">
+        <p class="text-base italic m-0">
+          <strong>Please note:</strong> The process is highly collaborative. Your active involvement is the main engine of change. The structure of the sessions will always be adapted to your unique circumstances and pace.
+        </p>
+      </div>
+
     </div>
   </article>
 </BaseLayout>
