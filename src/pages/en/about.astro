@@ -4,13 +4,13 @@ import LanguageSwitch from '../../components/LanguageSwitch.astro';
 const lang = 'en';
 ---
 
-<BaseLayout lang={lang} title="About - Giovanna Niola" description="Information about my background and therapeutic approach">
+<BaseLayout lang={lang} title="About Me - Giovanna Niola" description="Information about my background and therapeutic approach">
   <Fragment slot="langswitch"><LanguageSwitch lang={lang} /></Fragment>
   <Fragment slot="langswitch-mobile"><LanguageSwitch lang={lang} /></Fragment>
   
   <article class="max-w-4xl mx-auto px-4 py-12">
     <img 
-      src="/images/placeholder-about.jpg" 
+      src="/images/about.jpg" 
       alt="Giovanna Niola" 
       class="rounded-2xl w-full h-64 object-cover mb-12" 
       loading="lazy"
@@ -19,40 +19,115 @@ const lang = 'en';
     />
     
     <section class="mb-12">
-      <h1 class="font-serif text-3xl md:text-4xl mb-6">About me</h1>
+      <h1 class="font-serif text-3xl md:text-4xl mb-6">About Me</h1>
       <div class="prose prose-lg max-w-none">
         <p class="text-slate-700 leading-relaxed">
-          My name is Giovanna Niola and I'm a cognitive-behavioural therapist registered with the Sardinia Psychologists' Board (1/SPS).
+          My name is Giovanna Niola and I am a Cognitive Behavioural Psychotherapist registered with the Order of Psychologists of Sardinia (1/SPS).
         </p>
         <p class="text-slate-700 leading-relaxed mt-4">
-          [Placeholder: Insert here your professional biography, the path that led you to become a psychotherapist, 
-          your motivations and your work philosophy.]
+          I have over seven years of clinical experience gained in the English National Health Service (NHS), in hospital settings, and in the private sector.
+          I support adults experiencing anxiety, stress, emotional difficulties, personal blocks, or complex moments in their lives.          
+          My goal is to create a safe, welcoming, and non-judgmental space where you feel heard and supported towards greater well-being.
         </p>
       </div>
     </section>
 
     <section class="mb-12">
-      <h2 class="font-serif text-2xl md:text-3xl mb-6">My approach</h2>
-      <div class="prose prose-lg max-w-none">
-        <p class="text-slate-700 leading-relaxed">
-          I use CBT methods to set clear, measurable goals. The work is collaborative and practical, 
-          with exercises between sessions.
+      <h2 class="font-serif text-2xl md:text-3xl mb-6">My Approach</h2>
+      <div class="prose prose-lg max-w-none text-slate-700 leading-relaxed">
+        <p>
+          I integrate CBT tools to set clear and measurable goals. The process is collaborative and practical, often involving exercises between sessions.
         </p>
-        <p class="text-slate-700 leading-relaxed mt-4">
-          [Placeholder: Describe your working method, how you structure sessions, which techniques you use most, 
-          and how you help your patients achieve their goals.]
+        
+        <p class="mt-4">
+          My work integrates various complementary therapeutic models:
+        </p>
+
+        <ul class="list-disc pl-5 my-4 space-y-2">
+          <li>Cognitive–Behavioural Therapy (CBT)</li>
+          <li>Schema Therapy</li>
+          <li>Acceptance and Commitment Therapy (ACT)</li>
+          <li>Compassion Focused Therapy (CFT)</li>
+        </ul>
+
+        <p>
+          This allows me to build personalized pathways that respect your pace and needs.
+          I strongly believe in the value of the therapeutic relationship: an atmosphere of trust, authenticity, and collaboration is the heart of every possible transformation.
         </p>
       </div>
     </section>
 
-    <section>
-      <h2 class="font-serif text-2xl md:text-3xl mb-6">My training</h2>
-      <div class="prose prose-lg max-w-none">
-        <p class="text-slate-700 leading-relaxed">
-          [Placeholder: List your academic training, specializations, relevant continuing education courses, 
-          supervisions, and any other professional credentials you consider important to share.]
+    <section class="mb-12">
+      <h2 class="font-serif text-2xl md:text-3xl mb-6">My Background</h2>
+      <div class="prose prose-lg max-w-none text-slate-700 leading-relaxed">
+        <p>
+          After graduating in Psychological Sciences and Techniques at the University of Cagliari, I moved to the UK to continue my studies and specialize in psychotherapy at:
+        </p>
+        
+        <ul class="list-disc pl-5 my-4 space-y-2">
+          <li>Surrey University</li>
+          <li>Royal Holloway, University of London</li>
+          <li>Birkbeck College – University of London</li>
+        </ul>
+
+        <p>
+          Working in England gave me an international perspective and a deep sensitivity towards cultural differences, which I bring to my therapeutic practice today.
         </p>
       </div>
     </section>
+
+    <section class="mb-12">
+      <h2 class="font-serif text-2xl md:text-3xl mb-6">Clinical Experience</h2>
+      <div class="prose prose-lg max-w-none text-slate-700 leading-relaxed">
+        <p>
+          Throughout my career, I have worked with:
+        </p>
+        <ul class="list-disc pl-5 mt-4 mb-4 space-y-2">
+          <li>anxiety and anxiety disorders</li>
+          <li>stress, burnout, and work-related difficulties</li>
+          <li>depression and moments of personal block</li>
+          <li>relationship difficulties</li>
+          <li>self-esteem issues</li>
+          <li>repetitive and painful emotional patterns</li>
+          <li>life transitions, changes, and moving abroad</li>
+        </ul>
+        <p>
+          My approach is always practical, concrete, and oriented toward providing useful tools from the very first sessions.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-serif text-2xl md:text-3xl mb-6">Training and Qualifications</h2>
+      <div class="prose prose-lg max-w-none text-slate-700 leading-relaxed">
+        <ul class="list-disc pl-5 space-y-2">
+          <li>
+            <strong>“How to Become a More Effective CBT Therapist”</strong>
+          </li>
+          <li>
+            <strong>“Flexibility Within Fidelity”</strong>, Dr. Nick Grey
+          </li>
+          <li>
+            Introductory ACT Workshop
+          </li>
+          <li>
+            <strong>"ACT for Chronic Pain"</strong>, Prof. Lance McCracken
+          </li>
+          <li>
+            Mindfulness skills training
+          </li>
+          <li>
+            <strong>"Culturally Sensitive Practice"</strong>, Baffour Ababio
+          </li>
+          <li>
+            Adapting CBT for patients with comorbid personality difficulties
+          </li>
+          <li>
+            <strong>"Schema Therapy"</strong>, International Society of Schema Therapy (ISST)
+          </li>
+        </ul>
+      </div>
+    </section>
+
   </article>
 </BaseLayout>
