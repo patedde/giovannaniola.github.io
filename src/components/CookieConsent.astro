@@ -1,0 +1,61 @@
+---
+/* src/components/CookieConsent.astro */
+const { lang = 'it' } = Astro.props;
+
+const content = {
+  it: {
+    text: "Questo sito utilizza cookie tecnici per garantire il corretto funzionamento e migliorare l'esperienza di navigazione.",
+    linkText: "Leggi la Privacy Policy",
+    linkUrl: "/privacy",
+    accept: "Ho capito"
+  },
+  en: {
+    text: "This site uses technical cookies to ensure proper functioning and improve your browsing experience.",
+    linkText: "Read Privacy Policy",
+    linkUrl: "/en/privacy",
+    accept: "Got it"
+  }
+};
+
+const t = content[lang] || content.it;
+---
+
+<div 
+  id="cookie-banner" 
+  class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-4 md:p-6 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-50 hidden"
+>
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="text-sm text-slate-600 text-center md:text-left">
+      <p>
+        {t.text}
+        <a href={t.linkUrl} class="underline text-emerald-600 hover:text-emerald-700 ml-1">
+          {t.linkText}
+        </a>.
+      </p>
+    </div>
+    
+    <button 
+      id="accept-cookies" 
+      class="bg-emerald-600 text-white px-6 py-2 rounded text-sm font-medium hover:bg-emerald-700 transition-colors whitespace-nowrap"
+    >
+      {t.accept}
+    </button>
+  </div>
+</div>
+
+<script>
+  // Check if user has already accepted
+  const cookieBanner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('accept-cookies');
+
+  if (!localStorage.getItem('cookieConsent')) {
+    // If no consent found in storage, show the banner
+    cookieBanner?.classList.remove('hidden');
+  }
+
+  // Handle click
+  acceptBtn?.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'true');
+    cookieBanner?.classList.add('hidden');
+  });
+</script>
