@@ -26,7 +26,6 @@ const {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@500;600&display=swap" rel="stylesheet">
   </head>
   <body class="min-h-screen flex flex-col font-sans">
-    <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-emerald-600 text-white px-4 py-2 rounded">
       {lang === 'it' ? 'Vai al contenuto' : 'Skip to content'}
     </a>
@@ -37,7 +36,6 @@ const {
           Giovanna Niola
         </a>
         
-        <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center gap-6">
           <a class="hover:underline hover:text-emerald-600 transition-colors" href={lang === 'it' ? '/it/about' : '/en/about'}>
             {lang === 'it' ? 'Chi sono' : 'About'}
@@ -54,7 +52,6 @@ const {
           <slot name="langswitch" />
         </nav>
 
-        <!-- Mobile Menu Button -->
         <button 
           id="mobile-menu-button" 
           class="md:hidden p-2 hover:bg-slate-100 rounded"
@@ -67,7 +64,6 @@ const {
         </button>
       </div>
 
-      <!-- Mobile Navigation -->
       <nav id="mobile-menu" class="hidden md:hidden border-t">
         <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col gap-4">
           <a class="hover:text-emerald-600 transition-colors" href={lang === 'it' ? '/it/about' : '/en/about'}>
@@ -114,23 +110,7 @@ const {
       }
     </script>
 
-    <script type="module" src="/src/components/ConsentBanner.ts"></script>
-  
-<!DOCTYPE html>
-<html lang={lang}>
-  <head>
-    </head>
-  <body class="flex flex-col min-h-screen">
+    <CookieConsent lang={lang} />
     
-    <Header lang={lang} />
-    
-    <main class="flex-grow">
-      <slot />
-    </main>
-
-    <Footer lang={lang} />
-
-    <CookieConsent lang={lang} />  
-
   </body>
 </html>
