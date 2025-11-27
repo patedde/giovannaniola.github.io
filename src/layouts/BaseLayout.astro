@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import CookieConsent from '../components/CookieConsent.astro';
 
 const { 
   lang = 'it', 
@@ -114,5 +115,22 @@ const {
     </script>
 
     <script type="module" src="/src/components/ConsentBanner.ts"></script>
+  
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    </head>
+  <body class="flex flex-col min-h-screen">
+    
+    <Header lang={lang} />
+    
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <Footer lang={lang} />
+
+    <CookieConsent lang={lang} />  
+
   </body>
 </html>
