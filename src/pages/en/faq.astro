@@ -5,64 +5,92 @@ const lang = 'en';
 
 const faqs = [
   {
-    question: "How long is a session?",
-    answer: "Each session lasts 50 minutes. This duration allows for in-depth work while maintaining focus."
+    question: "How does therapy with Giovanna work?",
+    answer: `I strive to create a supportive and confidential environment where you can freely explore your thoughts, emotions, and experiences. My goal is to adapt the therapeutic journey to your specific needs and help you reach your objectives.`
   },
   {
-    question: "Do you offer online sessions or only in-person?",
-    answer: "I offer both modalities. Online sessions are conducted via secure video call, while in-person sessions take place at my practice."
+    question: "How do I know if therapy is right for me?",
+    answer: `Therapy can be beneficial for anyone, whether you are facing significant difficulties or simply desire a path of personal growth. There is no specific "condition" required to start: if curiosity drives you, that is often a good reason to try.
+
+During the first session, I will ask you to fill out a mood questionnaire to help us better understand your needs. This allows us to focus on the areas you want to explore and build a personalized approach together.`
   },
   {
-    question: "Do I need a referral?",
-    answer: "No, you don't need a referral to book a private psychotherapy session."
+    question: "Is what I share confidential?",
+    answer: `Yes, confidentiality is a fundamental basis of therapy. I will explain the limits of confidentiality during our first meeting so you can feel safe sharing your thoughts and experiences.
+
+However, there are some circumstances where confidentiality might be limited, such as risks to your safety or legal obligations. I will discuss these situations openly to ensure clarity and transparency.`
   },
   {
-    question: "How can I cancel or reschedule an appointment?",
-    answer: "You can modify or cancel your appointment directly from the confirmation link you receive via email, or by contacting me at giovannaniola@gmail.com. I ask that you give at least 24 hours' notice when possible."
+    question: "How many sessions will I need?",
+    answer: `The number of sessions depends on your personal needs and the goals you wish to achieve. For some, a few sessions are enough to address a specific issue, while others may benefit from longer-term support.
+
+Generally, I recommend reviewing progress every 6-10 sessions to monitor how therapy is going and plan next steps. I offer both short-term and long-term pathways, depending on your preferences.`
   },
   {
-    question: "How long does it take to receive a response?",
-    answer: "I typically respond within 48 business hours. If you need urgent assistance, I recommend contacting appropriate emergency services."
+    question: "What are the therapy costs?",
+    answer: `The cost is 50 euros for a 50-minute session. If you have questions regarding the price or payment methods, please do not hesitate to contact me.`
   },
   {
-    question: "How long does a therapy course last?",
-    answer: "Duration varies depending on individual goals. CBT is generally a short-to-medium term approach, but each course is tailored to specific needs."
+    question: "What can I expect from the first appointment?",
+    answer: `The first meeting is an opportunity to explore your goals and the difficulties you wish to address together. I will ask you questions to better understand your background and experiences, in order to develop a personalized plan that meets your needs.
+
+This session also allows you to evaluate if I am the right person for you. Building a solid therapeutic relationship is crucial for the success of therapy, and I will be here to support you in this process.`
   },
   {
-    question: "Do you work with adolescents?",
-    answer: "[Placeholder: Specify your target age range and whether you work with minors, and if so, whether parental presence is required]"
+    question: "Why do we use questionnaires?",
+    answer: `Questionnaires help us better understand your emotional and mental state, identifying areas where you might grow. They also serve to monitor progress over time.
+
+If you prefer not to complete the questionnaires, I will respect your choice, and we will find another way together to make the therapeutic journey effective and comfortable.`
+  },
+  {
+    question: "What happens if I need to cancel or reschedule an appointment?",
+    answer: `I understand that life can be unpredictable. If you need to cancel or reschedule an appointment, I ask that you notify me at least 48 hours in advance to avoid any charges.
+
+Cancellations with less than 48 hours' notice or missed appointments may incur a charge. If I need to reschedule a meeting, I will try to give you as much notice as possible.`
+  },
+  {
+    question: "What happens if I want to end therapy?",
+    answer: `If you wish to stop therapy, you are free to do so at any time. I invite you, if possible, to discuss it together during a session to facilitate a serene closure and address any doubts or concerns. If you prefer, you can also communicate this to me via email, in whichever way is simplest and most comfortable for you.`
   }
 ];
 ---
 
-<BaseLayout lang={lang} title="FAQ - Frequently asked questions" description="Answers to the most common questions about psychotherapy">
+<BaseLayout lang={lang} title="FAQ - Frequently Asked Questions" description="Answers to common questions about psychotherapy">
   <Fragment slot="langswitch"><LanguageSwitch lang={lang} /></Fragment>
   <Fragment slot="langswitch-mobile"><LanguageSwitch lang={lang} /></Fragment>
-  
+    
   <article class="max-w-4xl mx-auto px-4 py-12">
     <img 
-      src="/images/placeholder-faq.jpg" 
-      alt="Frequently asked questions" 
-      class="rounded-2xl w-full h-64 object-cover mb-12" 
+      src="/images/faq.jpg" 
+      alt="Frequently Asked Questions" 
+      class="rounded-2xl w-full h-auto mb-10 shadow-sm" 
       loading="lazy"
       width="800"
       height="400"
     />
     
-    <h1 class="font-serif text-3xl md:text-4xl mb-8">Frequently asked questions</h1>
+    <div class="mb-12">
+      <h1 class="font-serif text-3xl md:text-4xl mb-6">Frequently Asked Questions about Therapy</h1>
+      <p class="text-lg text-slate-700 leading-relaxed">
+        Below you will find answers to some of the most common questions about my therapy services. 
+        If you have other questions or would like more information, please do not hesitate to contact me via email at 
+        <a href="mailto:giovannaniola@gmail.com" class="underline hover:text-emerald-600">giovannaniola@gmail.com</a> 
+        or by phone at <a href="tel:+393518635200" class="underline hover:text-emerald-600">+39 351 863 5200</a>.
+      </p>
+    </div>
     
     <div class="space-y-8">
       {faqs.map((faq) => (
-        <div class="border-b pb-6">
-          <h2 class="font-serif text-xl md:text-2xl mb-3 text-slate-900">{faq.question}</h2>
-          <p class="text-slate-700 leading-relaxed">{faq.answer}</p>
+        <div class="border-b pb-8">
+          <h2 class="font-serif text-xl md:text-2xl mb-4 text-slate-900">{faq.question}</h2>
+          <p class="text-slate-700 leading-relaxed whitespace-pre-line">{faq.answer}</p>
         </div>
       ))}
     </div>
 
-    <div class="mt-12 p-6 bg-sand-50 rounded-xl border">
+    <div class="mt-12 p-6 bg-slate-50 rounded-xl border border-slate-200">
       <p class="text-slate-700">
-        <strong>Can't find the answer you're looking for?</strong> Feel free to contact me via email at{' '}
+        <strong>Still have doubts?</strong> Feel free to write to me at{' '}
         <a href="mailto:giovannaniola@gmail.com" class="underline text-emerald-600">giovannaniola@gmail.com</a>.
       </p>
     </div>
