@@ -1,6 +1,5 @@
 ---
-/* 
- * IMPORTANT: Replace with your actual Formspree endpoint
+/* * IMPORTANT: Replace with your actual Formspree endpoint
  * Get one at https://formspree.io after creating your form
  */
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mrbwpqka';
@@ -10,6 +9,21 @@ const { lang = 'it' } = Astro.props;
 if (FORMSPREE_ENDPOINT.includes('YOUR_FORM_ID_HERE')) {
   console.warn('⚠️  ContactForm: Update FORMSPREE_ENDPOINT with your actual form ID');
 }
+
+// Define the reasons for contact with translations
+const contactReasons = [
+  { value: 'Requesting info', label_en: 'Requesting info', label_it: 'Richiesta informazioni' },
+  { value: 'Anxiety', label_en: 'Anxiety', label_it: 'Ansia' },
+  { value: 'Low mood or depression', label_en: 'Low mood or depression', label_it: 'Umore basso o depressione' },
+  { value: 'Sleep difficulties', label_en: 'Sleep difficulties', label_it: 'Disturbi del sonno' },
+  { value: 'Trauma', label_en: 'Trauma', label_it: 'Trauma' },
+  { value: 'Body image', label_en: 'Body image', label_it: 'Immagine fisica' },
+  { value: 'Obsessive thoughts / compulsive behaviours', label_en: 'Obsessive thoughts / compulsive behaviours', label_it: 'Pensieri ossessivi / comportamenti compulsivi' },
+  { value: 'Relationship', label_en: 'Relationship', label_it: 'Relazioni / Problemi di coppia' },
+  { value: 'ADHD', label_en: 'ADHD', label_it: 'ADHD' },
+  { value: 'Autism', label_en: 'Autism', label_it: 'Autismo' },
+  { value: 'Something else', label_en: 'Something else', label_it: 'Altro' },
+];
 ---
 
 <form action={FORMSPREE_ENDPOINT} method="POST" class="space-y-4 max-w-xl">
@@ -29,17 +43,52 @@ if (FORMSPREE_ENDPOINT.includes('YOUR_FORM_ID_HERE')) {
     />
   </div>
   
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
+      <label for="email" class="block text-sm font-medium mb-1">
+        Email <span class="text-red-600">*</span>
+      </label>
+      <input 
+        required 
+        type="email" 
+        id="email"
+        name="email" 
+        class="w-full border border-slate-300 rounded px-3 py-2 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600" 
+      />
+    </div>
+
+    <div>
+      <label for="phone" class="block text-sm font-medium mb-1">
+        {lang === 'it' ? 'Telefono' : 'Phone Number'}
+      </label>
+      <input 
+        type="tel" 
+        id="phone"
+        name="phone" 
+        class="w-full border border-slate-300 rounded px-3 py-2 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600" 
+      />
+    </div>
+  </div>
+
   <div>
-    <label for="email" class="block text-sm font-medium mb-1">
-      Email <span class="text-red-600">*</span>
+    <label for="reason" class="block text-sm font-medium mb-1">
+      {lang === 'it' ? 'Motivo del contatto' : 'Reason for contact'} <span class="text-red-600">*</span>
     </label>
-    <input 
-      required 
-      type="email" 
-      id="email"
-      name="email" 
-      class="w-full border border-slate-300 rounded px-3 py-2 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600" 
-    />
+    <select 
+      required
+      id="reason"
+      name="reason"
+      class="w-full border border-slate-300 rounded px-3 py-2 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 bg-white"
+    >
+      <option value="" disabled selected>
+        {lang === 'it' ? 'Seleziona un\'opzione...' : 'Select an option...'}
+      </option>
+      {contactReasons.map((reason) => (
+        <option value={reason.value}>
+          {lang === 'it' ? reason.label_it : reason.label_en}
+        </option>
+      ))}
+    </select>
   </div>
   
   <div>
@@ -55,7 +104,6 @@ if (FORMSPREE_ENDPOINT.includes('YOUR_FORM_ID_HERE')) {
     ></textarea>
   </div>
   
-  <!-- Minimal GDPR consent -->
   <div class="flex items-start gap-2">
     <input 
       required 
